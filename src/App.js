@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import Person from './Components/Person';
+
+// const users = ['chris', 'nick'];
+// const [SuperAdmin, SuperUser] = users;
 
 function App() {
+  let [count, setXCount] = useState(0);
+  const [topic, setTopic] = React.useState({ name: 'React' });
+
+  const increaseCount = () => {
+    setXCount(prev => prev + 10);
+    setXCount(prev => prev + 10);
+    setXCount(prev => prev + 10);
+    setXCount(prev => prev + 10);
+
+    // const prevTopic = { ...topic };
+    // prevTopic.xyz = 'abc'
+    // setTopic(prevTopic);
+
+    setTopic({ ...topic, xyz1: 'abc1' });
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>Count Value is : {count}</p>
+      <p>{JSON.stringify(topic)}</p>
+      <button onClick={increaseCount}>Count +</button>
+      <hr />
+      <Person />
     </div>
   );
 }
