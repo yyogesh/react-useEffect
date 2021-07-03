@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
 import Person from './Components/Person';
+import WindowResize from './Components/WindowResize';
 
 // const users = ['chris', 'nick'];
 // const [SuperAdmin, SuperUser] = users;
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <div className="App">
+      <WindowResize />
       <p>Count Value is : {count}</p>
       <p>{JSON.stringify(topic)}</p>
       <button onClick={increaseCount}>Count +</button>
