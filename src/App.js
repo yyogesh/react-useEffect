@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 import Person from './Components/Person';
 import WindowResize from './Components/WindowResize';
+import Product from './Components/Product';
 
 // const users = ['chris', 'nick'];
 // const [SuperAdmin, SuperUser] = users;
@@ -31,6 +32,7 @@ function App() {
       <button onClick={increaseCount}>Count +</button>
       <hr />
       <Person />
+      <Product />
     </div>
   );
 }
